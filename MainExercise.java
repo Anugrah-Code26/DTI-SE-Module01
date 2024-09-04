@@ -1,64 +1,71 @@
-import exercise.Circle;
-import exercise.DateDifference;
-import exercise.InitialName;
-import exercise.Rectangle;
-import exercise.TriangleAngles;
+import exercise.*;
+import java.util.Scanner;
 
 public class MainExercise {
     public static void main(String[] args) {
-    // 01. Write a code to find area of rectangle!
-        System.out.println("\n" + "01. Write a code to find area of rectangle!");
+        // Create a Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+
+    // 01. Write a program that takes a temperature in Fahrenheit as input and converts it to Celsius!
+        System.out.println("\n" + "01. Write a program that takes a temperature in Fahrenheit as input and converts it to Celsius!");
         
-        // Rectangle Dimension
-        Rectangle rectangle = new Rectangle(5, 3);
-        System.out.println("Rectangle Length: " + rectangle.getLength());
-        System.out.println("Rectangle Width: " + rectangle.getWidth());
-        
-        // Rectangle Calculation
-        System.out.println("Rectangle Circumference: " + rectangle.calculateCircumference());
-        System.out.println("Rectangle Area: " + rectangle.calculateCircumference());
+        // Input Fahrenheit
+        System.out.println("Enter temperature in Fahrenheit: ");
+        double fahrenheitInput = scanner.nextDouble();
+        scanner.nextLine();
+        FahrenheitToCelsius fahrenheitToCelsius = new FahrenheitToCelsius(fahrenheitInput);
 
-    // 02. Write a code to find diameter, circumference & area of a circle!
-        System.out.println("\n" + "02. Write a code to find diameter, circumference & area of a circle!");
+        // Convert to Celsius
+        System.out.println("Temperature in Celsius: " + fahrenheitToCelsius.getCelsius() + " degree");
 
-        // Circle Radius
-        Circle circle = new Circle(5);
-        System.out.println("Circle Radius: " + circle.getRadius());
+    // 02. Write a code to convert centimeter to kilometer.!
+        System.out.println("\n" + "02. Write a code to convert centimeter to kilometer.!");
 
-        // Circle Calculation
-        System.out.println("Circle Diameter: " + circle.calculateDiameter());
-        System.out.println("Circle Circumference: " + circle.calculateCircumference());
-        System.out.println("Circle Area: " + circle.calculateArea());
+        // Input Centimeter
+        System.out.println("Enter length in Centimeter: ");
+        double centimeterInput = scanner.nextDouble();
+        scanner.nextLine();
+        CmToKm cmToKm = new CmToKm(centimeterInput);
 
-    // 03. Write a code to find angles of triangle if two angles are given!
-        System.out.println("\n" + "03. Write a code to find angles of triangle if two angles are given!");
+        // Convert to Kilometer
+        System.out.println("Length in Kilometer: " + cmToKm.getKilometer() + "km");
 
-        // Triangle Known Angles
-        TriangleAngles triangleAngles = new TriangleAngles(80, 65);
-        System.out.println("Triangle known angles: " + triangleAngles.getAngle1() + " & " + triangleAngles.getAngle2());
+    // 03. Write a function that takes an integer n as input and returns true if n is odd and false if n is even!
+        System.out.println("\n" + "03. Write a function that takes an integer n as input and returns true if n is odd and false if n is even!");
 
-        // Calculate Other Triangle Angles
-        System.out.println("Other Triangle Angle: " + triangleAngles.calculateAngle());
+        // Input Number
+        System.out.println("Enter the number: ");
+        int numberInput = scanner.nextInt();
+        scanner.nextLine();
+        EvenOdd evenOdd = new EvenOdd(numberInput);
 
-    // 04. Write a code to get difference between dates in days!
-        System.out.println("\n" + "04. Write a code to get difference between dates in days!");
+        // Check Even Odd Number
+        System.out.println(evenOdd.getEven() + " (The number is " + evenOdd.getEvenOdd() + ")");
 
-        // Input The Dates
-        DateDifference dateDifference = new DateDifference(2024, 9, 1, 2024, 9, 10);
-        System.out.println("Start Date: " + dateDifference.getStartDate());
-        System.out.println("End Date: " + dateDifference.getEndDate());
+    // 04. Write a code to remove the ﬁrst occurrence of a given “search string” from a string!
+        System.out.println("\n" + "04. Write a code to remove the ﬁrst occurrence of a given “search string” from a string!");
 
-        // Calculate The Difference Days
-        System.out.println("Difference between the dates: " + dateDifference.calculateDateDifference() + " days");
+        // Input Word
+        System.out.print("Enter the word: ");
+        String wordInput = scanner.nextLine();
 
-    // 05. Write a code to print your name initial in uppercase!
-        System.out.println("\n" + "05. Write a code to print your name initial in uppercase!");
+        // Input Removed
+        System.out.print("Enter the removed word: ");
+        String removedWordInput = scanner.nextLine();
 
-        // Input Fullname
-        InitialName initialName = new InitialName("John Doe");
-        System.out.println("Fullname: " + initialName.getFullname());
+        // Show New Word
+        RemoveString removeString = new RemoveString(wordInput, removedWordInput);
+        System.out.print("The new word: " + removeString.getNewWord() + "\n");
 
-        // Generate Initials
-        System.out.println("Initial: " + initialName.getInitials());
+    // 05. Write a code to check whether a string is a palindrome or not!
+        System.out.println("\n" + "05. Write a code to check whether a string is a palindrome or not!");
+
+        // Input Word
+        System.out.print("Enter the word you want to check: ");
+        String checkWordInput = scanner.nextLine();
+
+        // Check Palindrome
+        Palindrome palindrome = new Palindrome(checkWordInput);
+        System.out.print(palindrome.palindromeConfirmation());
     }
 }
