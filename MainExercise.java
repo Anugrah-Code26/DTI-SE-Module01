@@ -58,7 +58,7 @@ public class MainExercise {
         System.out.print("The new word: " + removeString.getNewWord() + "\n");
 
     // 05. Write a code to check whether a string is a palindrome or not!
-        System.out.println("\n" + "05. Write a code to check whether a string is a palindrome or not!");
+        System.out.println("05. Write a code to check whether a string is a palindrome or not!");
 
         // Input Word
         System.out.print("Enter the word you want to check: ");
