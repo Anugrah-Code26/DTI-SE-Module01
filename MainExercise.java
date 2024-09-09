@@ -13,6 +13,7 @@ public class MainExercise {
         System.out.println("1. Word Guessing Game!");
         System.out.println("2. Currency Converter!");
         System.out.println("3. Remove Odd Number!");
+        System.out.println("4. FizzBuzz!");
 
         // Input for selecting exercise number
         System.out.print("Enter the number of the exercise you want to run: ");
@@ -44,7 +45,8 @@ public class MainExercise {
                 break;
 
             case 4:
-                System.out.println("4. Currency Converter!");
+                System.out.println("4. FizzBuzz!");
+                FizzBuzz.runFizzBuzz();
 
                 break;
 
