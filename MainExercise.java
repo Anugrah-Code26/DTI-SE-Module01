@@ -55,7 +55,7 @@ public class MainExercise {
 
                 int[] numbers = {2, 7, 11, 15};
                 System.out.print("Input target: ");
-                int target = scanner.nextInt();;
+                int target = scanner.nextInt();
                 AdditionTarget additionTarget = new AdditionTarget(target, numbers);
                 int[] result = additionTarget.numIndex();
 
