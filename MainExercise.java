@@ -9,7 +9,7 @@ public class MainExercise {
         Scanner scanner = new Scanner(System.in);
 
         // Display a menu of exercise numbers
-        System.out.println("Choose an exercise to run by its number (1-6):");
+        System.out.println("Choose an exercise to run by its number (1-5):");
         System.out.println("1. Word Guessing Game!");
         System.out.println("2. Currency Converter!");
         System.out.println("3. Remove Odd Number!");
