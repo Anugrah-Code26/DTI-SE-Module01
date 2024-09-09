@@ -39,12 +39,7 @@ public class MainExercise {
 
             case 3:
                 System.out.println("3. Remove Odd Number!");
-
-                int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-                RemoveOddNumber removeOddNumber = new RemoveOddNumber(array);
-                int[] evenNumbers = removeOddNumber.arrEvenNumber();
-                System.out.println("The Array: " + Arrays.toString(array));
-                System.out.println("The Even Array: " + Arrays.toString(evenNumbers));
+                RemoveOddNumber.run();
 
                 break;
 
