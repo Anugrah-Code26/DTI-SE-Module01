@@ -9,12 +9,14 @@ public class MainExercise {
         Scanner scanner = new Scanner(System.in);
 
         // Display a menu of exercise numbers
-        System.out.println("Choose an exercise to run by its number (1-6):");
-        System.out.println("1. Word Guessing Game!");
-        System.out.println("2. Currency Converter!");
-        System.out.println("3. Remove Odd Number!");
-        System.out.println("4. FizzBuzz!");
-        System.out.println("5. Addition Target!");
+        System.out.println("Choose an exercise to run by its number (1-7):");
+        System.out.println("1. Rotate Array!");
+        System.out.println("2. Check Duplicate in Array!");
+        System.out.println("3. Remove Duplicate in Array!");
+        System.out.println("4. Remove Specific Value in Array!");
+        System.out.println("5. Reverse String!");
+        System.out.println("6. Find Duplicate Value in Array!");
+        System.out.println("7. Range to Warmer Day!");
 
         // Input for selecting exercise number
         System.out.print("Enter the number of the exercise you want to run: ");
@@ -22,53 +24,64 @@ public class MainExercise {
         scanner.nextLine();
         System.out.println();
 
+        // Input Array
+        int[] duplicateArray = {1,2,2,3,3,3,4,5,6,6};
+        int[] noDuplicateArray = {1,2,3,4,5,6,7,8,9,10};
+        int[] temperature = {73,74,75,71,69,72,76,73};
+
         switch (exerciseNumber) {
             case 1:
-                System.out.println("1. Word Guessing Game!");
+                System.out.println("1. Rotate Array!");
 
-                WordGuessingGame.runGame();
+                ArrayRotation arrayRotation = new ArrayRotation(noDuplicateArray);
+                arrayRotation.rotate();
 
                 break;
 
             case 2:
-                System.out.println("2. Currency Converter!");
+                System.out.println("2. Check Duplicate in Array!");
 
-                CurrencyConverter.run();
+                CheckDuplicate checkDuplicate = new CheckDuplicate(noDuplicateArray);
+                checkDuplicate.check();
 
                 break;
 
             case 3:
-                System.out.println("3. Remove Odd Number!");
+                System.out.println("3. Remove Duplicate in Array!");
 
-                int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-                RemoveOddNumber removeOddNumber = new RemoveOddNumber(array);
-                int[] evenNumbers = removeOddNumber.arrEvenNumber();
-                System.out.println("The Array: " + Arrays.toString(array));
-                System.out.println("The Even Array: " + Arrays.toString(evenNumbers));
+                RemoveDuplicate removeDuplicate = new RemoveDuplicate(duplicateArray);
+                removeDuplicate.remove();
 
                 break;
 
             case 4:
-                System.out.println("4. FizzBuzz!");
+                System.out.println("4. Remove Specific Value in Array!");
 
-                FizzBuzz.runFizzBuzz();
+                RemoveSpecific removeSpecific = new RemoveSpecific(duplicateArray);
+                removeSpecific.remove();
 
                 break;
 
             case 5:
-                System.out.println("5. Addition Target!");
+                System.out.println("5. Reverse String!");
 
-                int[] numbers = {2, 7, 11, 15};
-                System.out.print("Input target: ");
-                int target = scanner.nextInt();;
-                AdditionTarget additionTarget = new AdditionTarget(target, numbers);
-                int[] result = additionTarget.numIndex();
+                ReverseString.reverse();
 
-                if (result.length == 2) {
-                    System.out.println(Arrays.toString(result));
-                } else {
-                    System.out.println("No valid pair found!");
-                }
+                break;
+
+            case 6:
+                System.out.println("6. Find Duplicate Value in Array!");
+
+                FindDuplicateValue findDuplicateValue = new FindDuplicateValue(duplicateArray);
+                findDuplicateValue.find();
+
+                break;
+
+            case 7:
+                System.out.println("7. Range to Warmer Day!");
+
+                RangeToWarmerDay rangeToWarmerDay = new RangeToWarmerDay(temperature);
+                rangeToWarmerDay.rangeDay();
 
                 break;
         }
