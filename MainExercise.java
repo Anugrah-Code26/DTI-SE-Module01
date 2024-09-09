@@ -1,6 +1,5 @@
 import exercise.*;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class MainExercise {
