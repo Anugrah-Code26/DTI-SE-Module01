@@ -13,10 +13,11 @@ public class MainExercise {
         System.out.println("1. Rotate Array!");
         System.out.println("2. Check Duplicate in Array!");
         System.out.println("3. Remove Duplicate in Array!");
-        System.out.println("4. Remove Specific Value in Array!");
-        System.out.println("5. Reverse String!");
-        System.out.println("6. Find Duplicate Value in Array!");
-        System.out.println("7. Range to Warmer Day!");
+        System.out.println("4. Sort Direction!");
+        System.out.println("5. Remove Specific Value in Array!");
+        System.out.println("6. Reverse String!");
+        System.out.println("7. Find Duplicate Value in Array!");
+        System.out.println("8. Range to Warmer Day!");
 
         // Input for selecting exercise number
         System.out.print("Enter the number of the exercise you want to run: ");
@@ -25,10 +26,11 @@ public class MainExercise {
         System.out.println();
 
         // Input Array
+        int[] nullArray = {};
         int[] duplicateArray = {1,2,2,3,3,3,4,5,6,6};
         int[] noDuplicateArray = {1,2,3,4,5,6,7,8,9,10};
+        int[] unSortedArray = {8,5,7,2};
         int[] temperature = {73,74,75,71,69,72,76,73};
-        int[] nullArray = {};
 
         switch (exerciseNumber) {
             case 1:
@@ -71,45 +73,58 @@ public class MainExercise {
                 break;
 
             case 4:
-                System.out.println("4. Remove Specific Value in Array!");
+                System.out.println("4. Sort Direction!");
 
-                int[] arrayInput4 = nullArray;
+                int[] arrayInput4 = unSortedArray;
 
                 if (arrayInput4.length == 0) {
                     System.out.println("Array is empty!");
                 } else {
-                    RemoveSpecific removeSpecific = new RemoveSpecific(arrayInput4);
-                    removeSpecific.remove();
+                    SortOrder sortOrder = new SortOrder(arrayInput4);
+                    sortOrder.runSort();
                 }
                 break;
 
             case 5:
-                System.out.println("5. Reverse String!");
-                ReverseString.reverse();
-                break;
+                System.out.println("5. Remove Specific Value in Array!");
 
-            case 6:
-                System.out.println("6. Find Duplicate Value in Array!");
+                int[] arrayInput5 = nullArray;
 
-                int[] arrayInput6 = duplicateArray;
-
-                if (arrayInput6.length == 0) {
+                if (arrayInput5.length == 0) {
                     System.out.println("Array is empty!");
                 } else {
-                    FindDuplicateValue findDuplicateValue = new FindDuplicateValue(arrayInput6);
-                    findDuplicateValue.find();
+                    RemoveSpecific removeSpecific = new RemoveSpecific(arrayInput5);
+                    removeSpecific.remove();
                 }
                 break;
 
-            case 7:
-                System.out.println("7. Range to Warmer Day!");
+            case 6:
+                System.out.println("6. Reverse String!");
+                ReverseString.reverse();
+                break;
 
-                int[] arrayInput7 = temperature;
+            case 7:
+                System.out.println("7. Find Duplicate Value in Array!");
+
+                int[] arrayInput7 = duplicateArray;
 
                 if (arrayInput7.length == 0) {
                     System.out.println("Array is empty!");
                 } else {
-                    RangeToWarmerDay rangeToWarmerDay = new RangeToWarmerDay(arrayInput7);
+                    FindDuplicateValue findDuplicateValue = new FindDuplicateValue(arrayInput7);
+                    findDuplicateValue.find();
+                }
+                break;
+
+            case 8:
+                System.out.println("8. Range to Warmer Day!");
+
+                int[] arrayInput8 = temperature;
+
+                if (arrayInput8.length == 0) {
+                    System.out.println("Array is empty!");
+                } else {
+                    RangeToWarmerDay rangeToWarmerDay = new RangeToWarmerDay(arrayInput8);
                     rangeToWarmerDay.rangeDay();
                 }
                 break;
