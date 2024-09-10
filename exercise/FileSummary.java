@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class FileSummary {
-    private static String path = "/home/anugrah/Documents/GitHub/DTI-SE-Module01/resources/product_sales_data.csv";
+    private static final String path = "/home/anugrah/Documents/GitHub/DTI-SE-Module01/resources/product_sales_data.csv";
 
     public static List<String> readColumnData(String filePath, String columnName) {
         List<String> result = new ArrayList<>();
