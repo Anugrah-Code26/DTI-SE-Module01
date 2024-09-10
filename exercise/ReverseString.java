@@ -9,12 +9,16 @@ public class ReverseString {
         System.out.print("Input the String: ");
         String stringInput = scanner.nextLine();
 
-        StringBuilder reverseString = new StringBuilder();
+        if (stringInput == null) {
+            System.out.println("String is null!");
+        } else {
+            StringBuilder reverseString = new StringBuilder();
 
-        for (int i = stringInput.length() - 1; i >= 0; i--) {
-            reverseString.append(stringInput.charAt(i));
+            for (int i = stringInput.length() - 1; i >= 0; i--) {
+                reverseString.append(stringInput.charAt(i));
+            }
+
+            System.out.println("Reversed String: " + reverseString);
         }
-
-        System.out.println("Reversed String: " + reverseString);
     }
 }

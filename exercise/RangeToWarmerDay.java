@@ -10,13 +10,12 @@ public class RangeToWarmerDay {
     }
 
     public void rangeDay() {
-        System.out.println("Temperature: " + Arrays.toString(temperatureArray));
         int[] range = new int[temperatureArray.length];
         int count = 0;
 
         for (int i = 0; i < temperatureArray.length - 1; i++) {
             if (temperatureArray[i] < temperatureArray[i + 1]) {
-                count++;
+                count = 1;
             } else {
                 for (int j = i + 1; j < temperatureArray.length - 1; j++) {
                     count++;
@@ -28,6 +27,7 @@ public class RangeToWarmerDay {
             range[i] = count;
             count = 0;
         }
+        System.out.println("Temperature: " + Arrays.toString(temperatureArray));
         System.out.println("Range to Warmer Day: " + Arrays.toString(range));
     }
 }

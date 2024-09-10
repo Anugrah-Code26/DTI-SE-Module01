@@ -13,22 +13,21 @@ public class RemoveSpecific {
     public void remove() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Array: " + Arrays.toString(array));
-
         System.out.print("Enter which value you want to remove: ");
         int removedValue = scanner.nextInt();
 
-        int k = 0;
+        int tempIndex = 0;
         int[] temp = new int[array.length];
 
         for (int i : array) {
             if (i != removedValue) {
-                temp[k++] = i;
+                temp[tempIndex++] = i;
             }
         }
 
-        int[] newArray = new int[k];
-        System.arraycopy(temp, 0, newArray, 0, k);
+        int[] newArray = new int[tempIndex];
+        System.arraycopy(temp, 0, newArray, 0, tempIndex);
+        System.out.println("Array: " + Arrays.toString(array));
         System.out.println("New Array: " + Arrays.toString(newArray));
     }
 }

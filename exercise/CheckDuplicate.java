@@ -10,7 +10,6 @@ public class CheckDuplicate {
     }
 
     public void check() {
-        System.out.println("Array: " + Arrays.toString(array));
         boolean isDuplicate = false;
 
         for (int i = 0; i < array.length; i++) {
@@ -21,6 +20,7 @@ public class CheckDuplicate {
                 }
             }
         }
+        System.out.println("Array: " + Arrays.toString(array));
         System.out.println(isDuplicate ? "True" : "False");
     }
 }

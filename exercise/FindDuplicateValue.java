@@ -10,24 +10,23 @@ public class FindDuplicateValue {
     }
 
     public void find() {
-        System.out.println("Array: " + Arrays.toString(duplicateArray));
-
         Arrays.sort(duplicateArray);
         int[] temp = new int[duplicateArray.length];
-        int k = 0;
+        int tempIndex = 0;
         boolean isDuplicate = false;
 
         for (int i = 0; i < duplicateArray.length - 1; i++) {
             if (duplicateArray[i] == duplicateArray[i + 1] && !isDuplicate) {
-                temp[k++] = duplicateArray[i];
+                temp[tempIndex++] = duplicateArray[i];
                 isDuplicate = true;
             } else {
                 isDuplicate = false;
             }
         }
 
-        int[] duplicateValue = new int[k];
-        System.arraycopy(temp, 0, duplicateValue, 0, k);
+        int[] duplicateValue = new int[tempIndex];
+        System.arraycopy(temp, 0, duplicateValue, 0, tempIndex);
+        System.out.println("Array: " + Arrays.toString(duplicateArray));
         System.out.println("Duplicate Value: " + Arrays.toString(duplicateValue));
     }
 }
