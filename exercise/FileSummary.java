@@ -110,7 +110,7 @@ public class FileSummary {
     public static void mostBoughtProduct() {
         int mostBoughtIndex = 0;
         for (int i = 1; i < productNames.size(); i++) {
-            if (totalSold.get(i-1) < totalSold.get(i)) {
+            if (totalSold.get(mostBoughtIndex) < totalSold.get(i)) {
                 mostBoughtIndex = i;
             }
         }
@@ -121,7 +121,7 @@ public class FileSummary {
     public static void leastBoughtProduct() {
         int leastBoughtIndex = 0;
         for (int i = 1; i < productNames.size(); i++) {
-            if (totalSold.get(i-1) > totalSold.get(i)) {
+            if (totalSold.get(leastBoughtIndex) > totalSold.get(i)) {
                 leastBoughtIndex = i;
             }
         }
