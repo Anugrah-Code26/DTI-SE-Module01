@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.UUID;
 
 public class User {
-    private String userId;
-    private String username;
-    private String password;
-    private List<String> tasks;
+    private final String userId;
+    private final String username;
+    private final String password;
+    private final List<String> tasks;
 
     public User(String username, String password) {
         this.userId = UUID.randomUUID().toString();

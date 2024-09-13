@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class UserManager {
-    private Map<String, User> users;
+    private final Map<String, User> users;
     private User loggedInUser;
 
     public UserManager() {
